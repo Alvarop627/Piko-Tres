@@ -1,7 +1,13 @@
 package com.pikotres.app.ui.presentation.views.menu
 
-import androidx.compose.foundation.layout.*
-import androidx.compose.material3.*
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -14,7 +20,9 @@ fun MenuScreen(viewModel: MenuViewModel = viewModel()) {
     // Observar los datos del ViewModel con collectAsState
     val menuItems by viewModel.menuItems.collectAsState(initial = emptyList())
 
-    Column(modifier = Modifier.fillMaxSize().padding(16.dp)) {
+    Column(modifier = Modifier
+        .fillMaxSize()
+        .padding(16.dp)) {
         Text(
             text = "Menú Principal",
             style = MaterialTheme.typography.headlineMedium
@@ -34,6 +42,8 @@ fun MenuItemView(item: String) {
     Text(
         text = item,
         style = MaterialTheme.typography.bodyLarge,
-        modifier = Modifier.fillMaxWidth().padding(8.dp)
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(8.dp)
     )
 }

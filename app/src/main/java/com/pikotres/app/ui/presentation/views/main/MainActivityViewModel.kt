@@ -1,8 +1,8 @@
 package com.pikotres.app.ui.presentation.views.main
 
-import androidx.lifecycle.ViewModel
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.State
+import androidx.compose.runtime.mutableStateOf
+import androidx.lifecycle.ViewModel
 
 // ViewModel para MainActivity
 class MainActivityViewModel : ViewModel() {
